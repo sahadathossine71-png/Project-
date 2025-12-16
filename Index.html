@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Navbar Dropdown</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1em 6em;
+    background:blanchedalmond;
+}
+
+.container{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+/* Tools dropdown */
+.tools{
+    position:relative;
+    cursor:pointer;
+}
+
+/* Dropdown menu */
+.tools ul{
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translate(-50%, 10px);
+
+    background:violet;
+    list-style:none;
+    padding:20px 40px;
+    margin: 0 -20px;
+    border-radius:20px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s ease;
+    z-index:10;
+}
+
+/* Show on hover */
+.tools:hover ul{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%, 0);
+}
+
+/* Tool item */
+.tools ul li{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+
+    padding:20px 20px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.tools ul li:hover{
+    background:#fff;
+}
+
+/* Image */
+.tools ul li img{
+    width:40px;
+}
+
+/* Tool name */
+.tools ul li span{
+    font-size:13px;
+    font-weight:600;
+    color:#222;
+}
+
+/* Navbar hover */
+.container > div:hover{
+    text-decoration:underline;
+}
+.ho:hover{
+    color: forestgreen;
+    background-color: yellow;
+    border-radius: 20px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Logo</h1>
+
+    <div class="container">
+        <div class="ho">Home</div>
+        <div class="ab">About</div>
+
+        <div class="tools">
+            Tools
+            <ul>
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2541/2541991.png">
+                    <span>Color Picker</span>
+                </li>
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png">
+                    <span>Image Resizer</span>
+                </li>
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
+                    <span>Photo Editor</span>
+                </li>
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/265/265682.png">
+                    <span>PDF Converter</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
