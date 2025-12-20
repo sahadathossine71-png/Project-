@@ -9,8 +9,15 @@ html, body {
 }
 
 body {
-  overflow: hidden; /* body scroll বন্ধ */
+/*  overflow-x: hidden;*/ /* body scroll বন্ধ */
 }
+/*.cursor{
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: green;
+}*/
 
 #smooth-wrapper {
   overflow: hidden;
@@ -20,11 +27,25 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:1em 6em;
+    padding:2em 6em;
     background:floralwhite;
-   
+    
     
 }
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+nav .content{
+  max-width:1400px;
+  margin:auto;
+}
+nav h1{
+    font-size: 4em;
+}
+
 *::selection{
     color: white;
     background-color: black;
@@ -110,6 +131,7 @@ nav{
 .container > div{
     padding:6px 10px;
     border-radius:8px;
+    font-size: 1.4rem;
     
 }
 
@@ -142,6 +164,7 @@ nav{
     border-radius: 27px;
     background-color: #80ffc1;
     color: brown;
+    font-size: 1.5em;
 }
 .butt:hover{
     filter: invert(1);
@@ -163,7 +186,9 @@ nav{
 .hero{
     border: 2px solid black;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
+    background-color: #1A73E8;
+    color: white;
 }
 .content{
     margin: 18em 6em;
@@ -171,19 +196,19 @@ nav{
 .content h1{
     display: flex;
     justify-content: center;
-    font-size: 5em;
+    font-size: 8em;
 }
 .content p{
     display: flex;
     justify-content: center;
     margin: 22px;
-    font-size: 2em;
+    font-size: 3em;
 }
 .btn{
     padding: 12px 54px;
     border: none;
-    border-radius: 30px;
-    font-size: 2em;
+    border-radius: 50px;
+    font-size: 4em;
     
 }
 .btn:hover{
@@ -205,8 +230,45 @@ nav{
 
 
 
-
 .review{
     border: 2px solid black;
-    height: 30vh;
+   min-width: 3000px;
+    height: 100vh;
+    background-color: #00C2FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ /*   gap:60px;*/
+    position: relative;
 }
+
+.card{
+    
+  width: 50%;
+    height: 50%;
+    background-color: sandybrown;
+    margin: 7em 4rem;
+}
+.review h1{
+    position: absolute;
+    top: 30px;      /* উপরে কত দূরে */
+    left: 40px;     /* বাম corner */
+
+    font-size: 12em;
+    color: #000;
+    text-transform: uppercase;
+}
+.review h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    width: 0%;
+    background-color: black;
+    transition: all 0.4s ease-in-out;
+}
+.review h1:hover::after{
+    width: 100%;
+}
+
